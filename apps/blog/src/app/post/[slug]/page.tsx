@@ -26,7 +26,7 @@ import { notFound } from 'next/navigation';
 export default async function PostPage({
   params,
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }) {
   const { slug } = await params;
 
