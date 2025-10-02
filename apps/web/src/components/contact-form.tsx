@@ -12,6 +12,7 @@ import { submitForm } from '../app/form-actions/actions';
 export function ContactForm() {
   const [state, formAction, isPending] = useActionState(submitForm, {
     message: '',
+    success: false,
   });
 
   const formRef = useRef<HTMLFormElement>(null);

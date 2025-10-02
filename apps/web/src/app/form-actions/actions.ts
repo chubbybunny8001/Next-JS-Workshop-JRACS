@@ -28,11 +28,12 @@ export async function submitForm(
     return {
       message: 'Please enter a valid email address',
       success: false,
+      error: 'Invalid email format',
     };
   }
 
   // Process the form data (e.g., save to database, send email, etc.)
-  console.log('[v0] Form submitted:', { name, email, phone, subject, message });
+  console.log('Form submitted:', { name, email, phone, subject, message });
 
   return {
     message: `Thank you, ${name}! We'll contact you at ${email}.`,

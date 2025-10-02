@@ -215,8 +215,8 @@ During this workshop, you'll gain hands-on experience with:
 - [x] Blog: Dynamic route  
 - [x] Blog: Error handling  
 - [x] Blog: Not found handling  
-- [ ] Blog: Pagination  
-- [ ] Contact form implementation  
+- [x] Blog: Pagination  
+- [x] Contact form implementation  
 
 ### Day 3
 - [ ] Add SEO & metadata
