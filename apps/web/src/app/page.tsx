@@ -161,7 +161,7 @@ export default async function HomePage() {
                 key={service.id}
               >
                 {service.popular && (
-                  <Badge className="absolute top-4 right-4 bg-accent text-accent-foreground">
+                  <Badge className="absolute top-4 right-4 bg-accent-foreground text-accent">
                     Popular
                   </Badge>
                 )}

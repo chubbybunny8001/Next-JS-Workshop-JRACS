@@ -107,7 +107,7 @@ export function BlogPostsGrid({ posts, categories }: BlogPostsGridProps) {
                         fill
                         src={post.coverImage || '/placeholder.svg'}
                       />
-                      <Badge className="absolute top-4 right-4 bg-background/90 text-foreground">
+                      <Badge className="absolute top-4 right-4 bg-accent-foreground text-accent transition-colors group-hover:bg-primary">
                         {post.category}
                       </Badge>
                     </div>

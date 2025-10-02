@@ -152,7 +152,7 @@ function Links({
             {navItems.map((item) => (
               <Link
                 className={cn(
-                  'font-medium text-sm transition-colors hover:text-accent',
+                  'font-medium text-sm transition-colors hover:text-accent dark:hover:text-foreground',
                   pathname === item.href
                     ? 'text-foreground'
                     : 'text-muted-foreground'
