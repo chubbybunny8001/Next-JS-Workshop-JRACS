@@ -1,20 +1,6 @@
-// Components
-import { BlogPostsGrid } from '@components/blog-posts-grid';
+import { BlogPostsSkeleton } from '@components/blog-posts-skeleton';
 
-// API Methods
-import { fetchCategories, fetchPosts } from '@repo/api/blog';
-
-export default async function HomePage() {
-
-  const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
-  await sleep(5000); // Simulate network delay for demo purposes
-
-  const [posts, categories] = await Promise.all([
-    
-    fetchPosts(50), // Fetch more posts to have enough for filtering
-    fetchCategories(),
-  ]);
-
+export default function BlogLoading() {
   return (
     <main>
       {/* Hero Section */}
@@ -30,7 +16,7 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
-      <BlogPostsGrid categories={categories} posts={posts} />
+      <BlogPostsSkeleton />
     </main>
   );
 }

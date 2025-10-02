@@ -195,26 +195,26 @@ During this workshop, you'll gain hands-on experience with:
 ## 📝 Daily Tasks
 
 ### Day 1
-- [ ] Web: Home page  
-- [ ] Web: Gallery page (set up `next/image`)  
-- [ ] Web: About page  
-- [ ] Web: Contact Us page  
-- [ ] Blog: Blog listing page  
+- [x] Web: Home page  
+- [x] Web: Gallery page (set up `next/image`)  
+- [x] Web: About page  
+- [x] Web: Contact Us page  
+- [x] Blog: Blog listing page  
 - [ ] UX & Styling improvements  
-- [ ] Header & Footer implementation  
-- [ ] Reusable UI components  
-- [ ] Correct colocation of UI components  
-- [ ] Nested layouts for Web and Blog  
-- [ ] Use ENV variables for linking the two apps from navigation  
+- [x] Header & Footer implementation  
+- [x] Reusable UI components  
+- [x] Correct colocation of UI components  
+- [x] Nested layouts for Web and Blog  
+- [x] Use ENV variables for linking the two apps from navigation  
 
 ### Day 2
-- [ ] Web Performance: Font optimisations  
+- [x] Web Performance: Font optimisations  
 - [ ] Web Performance: Audit Client vs Server Components  
-- [ ] Web Performance: Check for async waterfalls  
-- [ ] Web Performance: Add skeletons and loading states  
-- [ ] Blog: Dynamic route  
-- [ ] Blog: Error handling  
-- [ ] Blog: Not found handling  
+- [x] Web Performance: Check for async waterfalls  
+- [x] Web Performance: Add skeletons and loading states  
+- [x] Blog: Dynamic route  
+- [x] Blog: Error handling  
+- [x] Blog: Not found handling  
 - [ ] Blog: Pagination  
 - [ ] Contact form implementation  
 

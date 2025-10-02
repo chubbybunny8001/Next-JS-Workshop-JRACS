@@ -22,6 +22,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
+      "@components/*": ["./src/components/*"],
+      "@repo/api/*": ["../../packages/api/src/*"],
       "@repo/ui/*": ["../../packages/ui/src/*"]
     }
   },

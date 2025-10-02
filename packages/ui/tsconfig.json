@@ -10,6 +10,7 @@
     "module": "NodeNext",
     "moduleDetection": "force",
     "moduleResolution": "NodeNext",
+    "jsx": "react-jsx",
     "noUncheckedIndexedAccess": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
@@ -18,9 +19,10 @@
     "outDir": "dist",
     "baseUrl": ".",
     "paths": {
+      "@repo/api/*": ["@repo/api/*"],
       "@repo/ui/*": ["./src/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "../../apps/web/src/components/contact-form.tsx"],
   "exclude": ["node_modules", "dist"]
 }
