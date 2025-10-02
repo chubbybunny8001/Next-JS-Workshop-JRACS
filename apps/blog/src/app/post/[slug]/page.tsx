@@ -1,5 +1,4 @@
 // API Methods
-
 import { BlogReadingHistory } from '@components/blog-reading-history';
 import { fetchPostBySlug, fetchRecommendedPostsBySlug } from '@repo/api/blog';
 // Components
