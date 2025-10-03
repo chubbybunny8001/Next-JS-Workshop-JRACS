@@ -201,6 +201,7 @@ During this workshop, you'll gain hands-on experience with:
 - [x] Web: Contact Us page  
 - [x] Blog: Blog listing page  
 - [x] UX & Styling improvements  
+- [x] UX & Styling improvements  
 - [x] Header & Footer implementation  
 - [x] Reusable UI components  
 - [x] Correct colocation of UI components  
