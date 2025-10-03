@@ -219,7 +219,7 @@ During this workshop, you'll gain hands-on experience with:
 - [x] Contact form implementation  
 
 ### Day 3
-- [ ] Add SEO & metadata
+- [x] Add SEO & metadata
 - [x] Deploy to Vercel  
 - [x] Web Performance: Optimize images  
 - [x] Web Performance: Ensure correct rendering strategy  
