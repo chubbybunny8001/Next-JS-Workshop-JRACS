@@ -200,7 +200,7 @@ During this workshop, you'll gain hands-on experience with:
 - [x] Web: About page  
 - [x] Web: Contact Us page  
 - [x] Blog: Blog listing page  
-- [ ] UX & Styling improvements  
+- [x] UX & Styling improvements  
 - [x] Header & Footer implementation  
 - [x] Reusable UI components  
 - [x] Correct colocation of UI components  
@@ -209,7 +209,7 @@ During this workshop, you'll gain hands-on experience with:
 
 ### Day 2
 - [x] Web Performance: Font optimisations  
-- [ ] Web Performance: Audit Client vs Server Components  
+- [x] Web Performance: Audit Client vs Server Components  
 - [x] Web Performance: Check for async waterfalls  
 - [x] Web Performance: Add skeletons and loading states  
 - [x] Blog: Dynamic route  
@@ -220,11 +220,11 @@ During this workshop, you'll gain hands-on experience with:
 
 ### Day 3
 - [ ] Add SEO & metadata
-- [ ] Deploy to Vercel  
-- [ ] Web Performance: Optimise images  
-- [ ] Web Performance: Ensure correct rendering strategy  
-- [ ] Web Performance: Check Chrome DevTools Performance or Vercel Speed Insights  
-- [ ] Contact form: Add tracking (Vercel Analytics)  
+- [x] Deploy to Vercel  
+- [x] Web Performance: Optimize images  
+- [x] Web Performance: Ensure correct rendering strategy  
+- [x] Web Performance: Check Chrome DevTools Performance or Vercel Speed Insights  
+- [x] Contact form: Add tracking (Vercel Analytics)  
 
 ### Day 4
 - [ ] Security review: headers  

@@ -1,5 +1,8 @@
 // Next.js
 import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/next';
+
+import { NuqsAdapter } from 'nuqs/adapters/next/app';
 
 // Styles
 import './globals.css';
@@ -8,10 +11,11 @@ import './globals.css';
 import { Footer } from '@repo/ui/components/layout/footer';
 import { Root, Links } from '@repo/ui/components/layout/navigation';
 import { Toaster } from '@repo/ui/components/sonner';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata: Metadata = {
-  title: 'Vercel Academy Foundation - Web',
-  description: 'VAF Web',
+  title: 'Random Company - Web',
+  description: 'Random Company Website that has a gallery, contact form, and more.',
 };
 
 export default function RootLayout({
@@ -49,9 +53,13 @@ export default function RootLayout({
             navigationExternalLinkUrl={`http://${process.env.NEXT_PUBLIC_BLOG_BASE_URL}`}
           />
         </Root>
-        {children}
+        <NuqsAdapter>
+          {children}
+        </NuqsAdapter>
         <Toaster />
         <Footer quickLinks={quickLinks} resourceLinks={resourceLinks} />
+        <SpeedInsights />
+        <Analytics />
       </body>
   </html>
   )

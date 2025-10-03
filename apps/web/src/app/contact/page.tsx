@@ -13,6 +13,33 @@ import {
   CardTitle,
 } from '@repo/ui/components/card';
 import { Clock, Mail, MapPin, Phone } from 'lucide-react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact Us - Get In Touch | Company Name',
+  description:
+    'Have a question or want to work together? Get in touch with our team. Find our contact information, business hours, and frequently asked questions.',
+  keywords: [
+    'contact',
+    'get in touch',
+    'support',
+    'inquiries',
+    'business hours',
+    'FAQ',
+  ],
+  openGraph: {
+    title: 'Contact Us - Get In Touch',
+    description:
+      'Have a question or want to work together? Get in touch with our team. Find our contact information, business hours, and frequently asked questions.',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Contact Us - Get In Touch',
+    description:
+      'Have a question or want to work together? Get in touch with our team. Find our contact information, business hours, and frequently asked questions.',
+  },
+};
 
 export default async function ContactPage() {
   const [contactInfo, faqs] = await Promise.all([

@@ -1,3 +1,12 @@
+// API Methods
+/** biome-ignore-all assist/source/organizeImports: I link to have my imports ordered */
+import {
+  fetchCompanyStats,
+  fetchContactInfo,
+  fetchTeamMembers,
+} from '@repo/api/brand';
+
+// Components
 import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@repo/ui/components/avatar';
 import { Badge } from '@repo/ui/components/badge';
@@ -8,11 +17,35 @@ import {
   CardHeader,
   CardTitle,
 } from '@repo/ui/components/card';
-import {
-  fetchCompanyStats,
-  fetchContactInfo,
-  fetchTeamMembers,
-} from '@repo/api/brand';
+
+// Next.js
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Us - Our Mission, Values & Team | Company Name',
+  description:
+    'Learn about our mission to provide world-class services, our core values, and meet the talented team of professionals driving innovation and excellence.',
+  keywords: [
+    'about us',
+    'company mission',
+    'team',
+    'values',
+    'innovation',
+    'excellence',
+  ],
+  openGraph: {
+    title: 'About Us - Our Mission, Values & Team',
+    description:
+      'Learn about our mission to provide world-class services, our core values, and meet the talented team of professionals driving innovation and excellence.',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Us - Our Mission, Values & Team',
+    description:
+      'Learn about our mission to provide world-class services, our core values, and meet the talented team of professionals driving innovation and excellence.',
+  },
+};
 
 interface TeamMember {
   id: string;
