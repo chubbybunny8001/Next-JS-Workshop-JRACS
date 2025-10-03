@@ -1,6 +1,8 @@
 // API Methods
+/** biome-ignore-all assist/source/organizeImports: I like ordering my imports */
 import { BlogReadingHistory } from '@components/blog-reading-history';
 import { fetchPostBySlug, fetchRecommendedPostsBySlug } from '@repo/api/blog';
+
 // Components
 import {
   Avatar,
@@ -9,6 +11,7 @@ import {
 } from '@repo/ui/components/avatar';
 import { Badge } from '@repo/ui/components/badge';
 import { Button } from '@repo/ui/components/button';
+import { BlogPostImage } from '@/src/components/blog-post-image';
 import {
   Card,
   CardContent,
@@ -17,16 +20,60 @@ import {
   CardTitle,
 } from '@repo/ui/components/card';
 import { ArrowLeft, Calendar, Clock, Eye, Heart, Share2 } from 'lucide-react';
-
 // Next.js
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const post = await fetchPostBySlug(params.slug);
+
+  if (!post) {
+    return {
+      title: 'Post Not Found',
+      description: 'The requested blog post could not be found.',
+    };
+  }
+
+  return {
+    title: post.title,
+    description: post.excerpt,
+    authors: [{ name: post.author.name }],
+    keywords: post.tags,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: 'article',
+      publishedTime: new Date(post.publishedAt).toISOString(),
+      authors: [post.author.name],
+      images: [
+        {
+          url: post.coverImage || '/placeholder.svg',
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: [post.coverImage || '/placeholder.svg'],
+    },
+  };
+}
+
 
 export default async function PostPage({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
 
@@ -40,7 +87,7 @@ export default async function PostPage({
   }
 
   return (
-    <main>
+    <main className="fade-in animate-in duration-700">
       {/* Back Button */}
       <section className="border-border border-b py-4">
         <div className="container mx-auto px-4">
@@ -115,15 +162,10 @@ export default async function PostPage({
       <section className="border-border border-b">
         <div className="container mx-auto px-4 py-8">
           <div className="mx-auto max-w-4xl">
-            <div className="relative aspect-video overflow-hidden rounded-lg">
-              <Image
-                alt={post.title}
-                className="h-full w-full object-cover"
-                height={450}
-                src={post.coverImage || '/placeholder.svg'}
-                width={800}
-              />
-            </div>
+            <BlogPostImage
+              alt={post.title}
+              src={post.coverImage || '/placeholder.svg'}
+            />
           </div>
         </div>
       </section>
@@ -188,6 +230,8 @@ export default async function PostPage({
                         alt={recommendedPost.title}
                         className="h-full w-full object-cover transition-transform group-hover:scale-105"
                         height={450}
+                        quality={80}
+                        sizes="( max-width: 768px ) 100vw, ( max-width: 1200px ) 33vw, 25vw"
                         src={recommendedPost.coverImage || '/placeholder.svg'}
                         width={800}
                       />

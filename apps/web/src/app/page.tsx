@@ -1,4 +1,4 @@
-// Methods
+// API Methods
 import {
   fetchClients,
   fetchCompanyStats,
@@ -33,6 +33,32 @@ import {
 // Next.js
 import Image from 'next/image';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Innovative Solutions for Modern Business | Company Name',
+  description:
+    'We deliver exceptional services that drive growth, innovation, and success for companies worldwide. Trusted by industry leaders with 15+ years of experience.',
+  keywords: [
+    'business solutions',
+    'innovation',
+    'consulting',
+    'digital transformation',
+    'enterprise services',
+  ],
+  openGraph: {
+    title: 'Innovative Solutions for Modern Business',
+    description:
+      'We deliver exceptional services that drive growth, innovation, and success for companies worldwide.',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Innovative Solutions for Modern Business',
+    description:
+      'We deliver exceptional services that drive growth, innovation, and success for companies worldwide.',
+  },
+};
 
 export default async function HomePage() {
   const [services, testimonials, stats, clients] = await Promise.all([
@@ -283,6 +309,8 @@ export default async function HomePage() {
                   height={48}
                   src={client.logo}
                   width={150}
+                  quality={85}
+                  sizes='( max-width: 768px ) 50vw, ( max-width: 1200px ) 25vw, 20vw'
                 />
               </div>
             ))}

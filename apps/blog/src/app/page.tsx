@@ -4,6 +4,36 @@ import { BlogPostsGrid } from '@components/blog-posts-grid';
 // API Methods
 import { fetchCategories, fetchPosts } from '@repo/api/blog';
 
+// Next.js
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Blog - Insights, Tutorials & Stories | Company Name',
+  description:
+    'Read the latest insights, tutorials, and stories from our team. Stay updated with industry trends, best practices, and expert knowledge.',
+  keywords: [
+    'blog',
+    'articles',
+    'insights',
+    'tutorials',
+    'technology',
+    'best practices',
+    'industry news',
+  ],
+  openGraph: {
+    title: 'Blog - Insights, Tutorials & Stories',
+    description:
+      'Read the latest insights, tutorials, and stories from our team. Stay updated with industry trends, best practices, and expert knowledge.',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blog - Insights, Tutorials & Stories',
+    description:
+      'Read the latest insights, tutorials, and stories from our team. Stay updated with industry trends, best practices, and expert knowledge.',
+  },
+};
+
 export default async function HomePage() {
 
   const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));

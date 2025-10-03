@@ -19,11 +19,10 @@ import {
 } from '@repo/ui/components/card';
 import { Tabs, TabsList, TabsTrigger } from '@repo/ui/components/tabs';
 import { Calendar, Clock, Eye, Heart } from 'lucide-react';
-
 // Next.js
-import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { BlogPostImage } from '@/src/components/blog-post-image';
 
 interface BlogPostsGridProps {
   posts: BlogPost[];
@@ -101,10 +100,8 @@ export function BlogPostsGrid({ posts, categories }: BlogPostsGridProps) {
                 >
                   <Card className="h-full overflow-hidden transition-all hover:shadow-lg">
                     <div className="relative aspect-video overflow-hidden">
-                      <Image
+                      <BlogPostImage
                         alt={post.title}
-                        className="h-full w-full object-cover transition-transform group-hover:scale-105"
-                        fill
                         src={post.coverImage || '/placeholder.svg'}
                       />
                       <Badge className="absolute top-4 right-4 bg-accent-foreground text-accent transition-colors group-hover:bg-primary">
