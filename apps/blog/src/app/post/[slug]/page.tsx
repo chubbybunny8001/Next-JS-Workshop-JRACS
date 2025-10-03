@@ -1,5 +1,7 @@
 // API Methods
 /** biome-ignore-all assist/source/organizeImports: I like ordering my imports */
+export const dynamic = "force-static";
+
 import { BlogReadingHistory } from '@components/blog-reading-history';
 import { fetchPostBySlug, fetchRecommendedPostsBySlug } from '@repo/api/blog';
 

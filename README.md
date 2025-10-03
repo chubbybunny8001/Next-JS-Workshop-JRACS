@@ -230,10 +230,10 @@ During this workshop, you'll gain hands-on experience with:
 ### Day 4
 - [ ] Security review: headers  
 - [ ] Security review: API endpoints or Actions  
-- [ ] Security review: ENV variables  
-- [ ] Build & Web Performance: Build locally  
-- [ ] Build & Web Performance: Check build output  
-- [ ] Build & Web Performance: Deploy to Vercel  
+- [x] Security review: ENV variables  
+- [x] Build & Web Performance: Build locally  
+- [x] Build & Web Performance: Check build output  
+- [x] Build & Web Performance: Deploy to Vercel  
 
 ---
 

@@ -33,10 +33,10 @@ interface BlogPostsGridProps {
 //
 
 export function BlogPostsGrid({ posts, categories }: BlogPostsGridProps) {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all' );
 
   const filteredPosts =
-    selectedCategory === 'all'
+    selectedCategory === 'all' || null
       ? posts
       : posts.filter((post) => post.category === selectedCategory);
 
