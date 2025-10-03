@@ -11,7 +11,7 @@ export default function BlogPostLoading() {
       <section className="border-border border-b py-4">
         <div className="container mx-auto px-4">
           <Button asChild size="sm" variant="ghost">
-            <Link href="/blog">
+            <Link href="/">
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back to Blog
             </Link>

@@ -92,7 +92,7 @@ export function BlogPostsGrid({ posts, categories }: BlogPostsGridProps) {
                   animationFillMode: 'backwards',
                 }}
               >
-                <Link className="group block" href={`/blog/${post.slug}`} />
+                <Link className="group block" href={`/post/${post.slug}`} />
                 <Link
                   className="group"
                   href={`/post/${post.slug}`}
